@@ -36,7 +36,16 @@ class EntradaCard extends StatelessWidget {
               version: QrVersions.auto,
             ),
             Divider(color: Colors.black,),
-            SizedBox(height: 30,)
+            Padding(
+              padding: const EdgeInsets.only(left: 15),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,              
+                children: const [
+                Icon(Icons.share_outlined),
+                Text('Compartir Entrada')
+              ]),
+            ),
+            SizedBox(height: 20,)
           ],
         ),
       ),
