@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
+import 'package:provider/provider.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:socioscsherediano/models/models.dart';
+import 'package:socioscsherediano/pages/views/views.dart';
+import 'package:socioscsherediano/services/services.dart';
 
 class EntradaCard extends StatelessWidget {
 
@@ -16,6 +20,7 @@ class EntradaCard extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
+    final userService = context.read<UserService>();
     return Container(
       decoration: _ticketCardDecoration(),      
       child: Center(
@@ -25,11 +30,9 @@ class EntradaCard extends StatelessWidget {
             Text('Jornada #$jornada',style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold,color: Colors.grey[800])),
             Text('Locación: $zona - Asiento: $silla',style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold,color: Color.fromARGB(255, 1, 25, 69))),
             Text('Club Sport Herediano VS $equipo',style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold,color: Colors.grey[800])),
-            Divider(color: Colors.black,),
             SizedBox(height: 10,),
-            //Text('Asiento: $silla',style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold,color: Colors.black)),
-            //Text('Estadio: $estadio',style: TextStyle(fontSize: 14, color: Colors.black)),
-            //Text('Fecha: $fecha Hora: $hora',style: TextStyle(fontSize: 14, color: Colors.black)),
+            Divider(color: Colors.black,),
+            
             QrImage(
               data: entrada, 
               size:450,
@@ -40,9 +43,23 @@ class EntradaCard extends StatelessWidget {
               padding: const EdgeInsets.only(left: 15),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,              
-                children: const [
+                children: [
                 Icon(Icons.share_outlined),
-                Text('Compartir Entrada')
+                TextButton(
+                      onPressed: (){
+
+                      //  Navigator.pushReplacementNamed(context, 'register'),
+                      PersistentNavBarNavigator.pushNewScreen(context,
+                          screen: TicketSharedView(jornada:jornada,fecha:fecha,equipo:equipo,nombreInvitado: userService.nombreSocio,zona: zona,silla: silla,entrada: entrada,));
+
+                      },
+                      style: ButtonStyle(
+                        overlayColor: MaterialStateProperty.all(Colors.indigo.withOpacity(0.1)),
+                        shape: MaterialStateProperty.all(StadiumBorder())
+                      ),
+                      child: Text('Compartir Entrada',style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold,color: Colors.blueAccent.shade200),),
+                      
+                      ),
               ]),
             ),
             SizedBox(height: 20,)

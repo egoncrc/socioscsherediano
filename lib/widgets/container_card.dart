@@ -179,11 +179,11 @@ class _LoginForm extends StatelessWidget {
                    }
                 },
                 child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 190, vertical: 25),
+                  padding: const EdgeInsets.symmetric(horizontal: 110, vertical: 20),
                   child: Text(
                     loginForm.isLoading
                     ? 'Espere...' : 'INGRESAR', 
-                    style: const TextStyle(color: Colors.white),
+                    style: const TextStyle(color: Colors.white, fontSize:12),
                   ),
                 )
                 

@@ -20,7 +20,7 @@ class LoginBackground extends StatelessWidget {
             SingleChildScrollView(
               child: Column(
                 children: [
-                  const SizedBox(height:400),
+                  const SizedBox(height:380),
                   ContainerCard(),
                   
                   SizedBox(height: 10,),
@@ -67,13 +67,13 @@ class _HeaderBox extends StatelessWidget {
             Center(
               child: Column(
                 children: [
-                  Image(image: AssetImage('assets/garragris.png'),height:340,),
+                  Image(image: AssetImage('assets/garragris.png'),height:330,),
                 ],
               ),
             ),
             Center(child: Column(
               children: [
-                SizedBox(height: 55,),
+                SizedBox(height: 45,),
                 Padding(
                   padding: const EdgeInsets.only(right: 55, left: 55),
                   child: Column(                    
@@ -81,9 +81,9 @@ class _HeaderBox extends StatelessWidget {
                     children: [
                           Image(image: AssetImage('assets/escudo.png'),height:size.height * 0.20,), 
                           SizedBox(height: 40,),                     
-                          Text('SOCIOS', style: GoogleFonts.abrilFatface(color: Colors.white, fontSize:24, fontWeight:FontWeight.bold)),
+                          Text('SOCIOS', style: GoogleFonts.abrilFatface(color: Colors.white, fontSize:20, fontWeight:FontWeight.bold)),
                           SizedBox(height: 10,),
-                          Text('C.S. HEREDIANO', style: GoogleFonts.abrilFatface(color: Colors.white, fontSize:24, fontWeight:FontWeight.bold),),
+                          Text('C.S. HEREDIANO', style: GoogleFonts.abrilFatface(color: Colors.white, fontSize:20, fontWeight:FontWeight.bold),),
                           SizedBox(height: 10,),
                        
                       
