@@ -78,8 +78,8 @@ BoxDecoration _tickedViewDecoration()=> const BoxDecoration(
       begin: Alignment.topCenter,
       end: Alignment.bottomCenter,
       colors: [
-        Color.fromARGB(255, 116, 16, 3),
-        Color.fromRGBO(255, 194, 14, 0.8),
+        Color.fromRGBO(120, 120, 120, 1),
+        Color.fromRGBO(218, 223, 223, 1),
         // Color.fromRGBO(21,176,179, 1),
       ]
       )

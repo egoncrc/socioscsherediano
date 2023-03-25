@@ -48,57 +48,62 @@ class TicketListView extends StatelessWidget {
                       height: 200,
                       alignment: Alignment.center,
                       decoration: _tickedListCardDecoration(),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text('JORNADA #${entradaActual.jornada}',
-                              style: TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black)),
-                          SizedBox(  height: 5, ),
-                          Text('Club Sport Herediano',
-                              style: TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black)),
-                                  Text('VS',
-                              style: TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black)),
-                                  Text('${entradaActual.equipo}',
-                              style: TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black)),                          
-                          SizedBox(
-                            height: 5,
-                          ),
-                          ListTile(
-                            leading: CircleAvatar(
-                              //child: Icon(Icons.account_circle),
-                              backgroundImage: AssetImage('assets/escudo.png'),
-                              backgroundColor: Colors.grey.withOpacity(0),
-                              radius: 20,
+                      child: Stack(
+                        children:[ 
+                          Image(image: AssetImage('assets/backgroundcard.png'),height:200, color: Colors.grey.shade500),
+                          Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            SizedBox(
+                              height: 5,
                             ),
-                            title: Text(zona,
+                            Text('JORNADA #${entradaActual.jornada}',
                                 style: TextStyle(
-                                    fontSize: 22,
+                                    fontSize: 14,
                                     fontWeight: FontWeight.bold,
-                                    color: Color.fromARGB(255, 1, 84, 151))),
-                            subtitle: Text('Ver aquí sus entradas',
+                                    color: Colors.grey[700])),
+                            SizedBox(  height: 5, ),
+                            Text('Club Sport Herediano',
                                 style: TextStyle(
-                                    fontSize: 16,
+                                    fontSize: 14,
                                     fontWeight: FontWeight.bold,
-                                    color: Color.fromARGB(255, 1, 84, 151))),
-                            trailing: Icon(Icons.arrow_circle_right_outlined,
-                                size: 40,
-                                color: Color.fromARGB(255, 1, 84, 151)),
-                          ),
+                                    color: Color.fromARGB(255, 159, 112, 4))),
+                                    Text('VS',
+                                style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.bold,
+                                    color: Color.fromARGB(255, 159, 112, 4))),
+                                    Text('${entradaActual.equipo}',
+                                style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.bold,
+                                    color: Color.fromARGB(255, 159, 112, 4))),                          
+                            SizedBox(
+                              height: 5,
+                            ),
+                            ListTile(
+                              leading: CircleAvatar(
+                                //child: Icon(Icons.account_circle),
+                                backgroundImage: AssetImage('assets/escudo.png'),
+                                backgroundColor: Colors.grey.withOpacity(0),
+                                radius: 20,
+                              ),
+                              title: Text(zona,
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                      color: Color.fromARGB(248, 176, 31, 2))),
+                              subtitle: Text('Ver aquí sus entradas',
+                                  style: TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.bold,
+                                      color: Color.fromARGB(169, 1, 84, 151))),
+                              trailing: Icon(Icons.double_arrow_sharp,
+                                  size: 40,
+                                  color: Color.fromARGB(255, 159, 112, 4)),
+                            ),
+                          ],
+                        ),
                         ],
                       ),
                     ),
@@ -113,9 +118,11 @@ BoxDecoration _tickedListDecoration() => const BoxDecoration(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             colors: [
-          Color.fromARGB(255, 116, 16, 3),
-          Color.fromRGBO(255, 194, 14, 0.8),
-          // Color.fromRGBO(21,176,179, 1),
+          // Color.fromARGB(255, 116, 16, 3),
+          // Color.fromRGBO(255, 194, 14, 0.8),
+           Color.fromRGBO(120, 120, 120, 1),
+           Color.fromRGBO(218, 223, 223, 1),
+          //  Color.fromRGBO(244, 247, 247, 1),
         ]));
 
 BoxDecoration _tickedListCardDecoration() => BoxDecoration(

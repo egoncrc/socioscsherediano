@@ -53,7 +53,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Color.fromARGB(255, 239, 223, 143),
         appBarTheme: const AppBarTheme(
           elevation: 0,
-          color: Color.fromARGB(255, 116, 16, 3),
+          color: Color.fromRGBO(120, 120, 120, 1),
         ),
         floatingActionButtonTheme: const FloatingActionButtonThemeData(
           backgroundColor: Colors.grey,

@@ -24,7 +24,7 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Socio(a): ${userService.nombreSocio}', style: const TextStyle(color: Colors.white70,fontWeight: FontWeight.bold, fontSize:18)),
         actions: [IconButton(
-                    icon: Icon(Icons.login_outlined),
+                    icon: Icon(Icons.login_outlined, color: Colors.white),
                     onPressed: (){
                       authService.logout();
                       userService.nombreSocio='';

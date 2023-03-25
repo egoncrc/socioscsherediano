@@ -37,7 +37,7 @@ class CalendarListView extends StatelessWidget {
                           begin: Alignment.topLeft,
                           end: Alignment.bottomRight,
                           colors: [
-                            Color.fromARGB(255, 249, 215, 112),                            
+                            Color.fromARGB(255, 159, 112, 4),                            
                             Color.fromARGB(255, 249, 249, 248),
                           ]
                           ),
@@ -54,7 +54,7 @@ class CalendarListView extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           SizedBox(height: 5,),
-                          Text('Jornada #$jornada',style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold,color: Colors.black)),
+                          Text('Jornada #$jornada',style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold,color: Color.fromARGB(248, 176, 31, 2))),
                           ListTile(
                             leading: CircleAvatar(
                               //child: Icon(Icons.account_circle),
@@ -83,9 +83,8 @@ BoxDecoration _calendarListDecoration() => const BoxDecoration(
       begin: Alignment.topCenter,
       end: Alignment.bottomCenter,
       colors: [
-        Color.fromARGB(255, 116, 16, 3),
-        Color.fromRGBO(255, 194, 14, 0.8),
-        // Color.fromRGBO(21,176,179, 1),
+        Color.fromRGBO(120, 120, 120, 1),
+        Color.fromRGBO(218, 223, 223, 1),
       ]
       )
 );
