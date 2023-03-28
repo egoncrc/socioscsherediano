@@ -41,14 +41,14 @@ class EntradaCardShared extends StatelessWidget {
       child: Stack(
         children: [
           Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: Image(image: AssetImage('assets/escudo.png'), height: 50),
+            padding: const EdgeInsets.only(top: 13, left:18),
+            child: Image(image: AssetImage('assets/escudo.png'), height: 40),
           ),
           Center(
             child: Column(
               children: [
                 SizedBox(
-                  height: 20,
+                  height: 25,
                 ),
                 Text('Jornada #$jornada',
                     style: TextStyle(

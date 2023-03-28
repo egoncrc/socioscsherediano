@@ -26,13 +26,13 @@ class EntradaCard extends StatelessWidget {
       child: Stack(
         children: [
           Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: Image(image: AssetImage('assets/escudo.png'),height:50),
+            padding: const EdgeInsets.only(top: 13, left:18),
+            child: Image(image: AssetImage('assets/escudo.png'),height:40),
           ),
           Center(
           child: Column(
             children: [
-              SizedBox(height: 20,),
+              SizedBox(height: 25,),
               Text('Jornada #$jornada',style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold,color: Colors.grey[800])),
               Text('$zona - Asiento: $silla',style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold,color: Color.fromARGB(248, 176, 31, 2))),
               Text('C.S. Herediano VS $equipo',style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold,color: Color.fromARGB(255, 159, 112, 4))),
@@ -41,7 +41,7 @@ class EntradaCard extends StatelessWidget {
               
               QrImage(
                 data: entrada, 
-                size:400,
+                size:350,
                 version: QrVersions.auto,
               ),
               Divider(color: Colors.black,),

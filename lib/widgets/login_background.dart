@@ -20,7 +20,7 @@ class LoginBackground extends StatelessWidget {
             SingleChildScrollView(
               child: Column(
                 children: [
-                  const SizedBox(height:380),
+                  const SizedBox(height:320),
                   ContainerCard(),
                   
                   SizedBox(height: 10,),
@@ -66,25 +66,25 @@ class _HeaderBox extends StatelessWidget {
           children: [            
             Center(
               child: Column(
-                children: [
-                  Image(image: AssetImage('assets/garragris.png'),height:330,),
+                children: const [
+                  Image(image: AssetImage('assets/garragris.png'),height:250, width: 250),
                 ],
               ),
             ),
             Center(child: Column(
               children: [
-                SizedBox(height: 45,),
+                SizedBox(height: 50,),
                 Padding(
                   padding: const EdgeInsets.only(right: 55, left: 55),
                   child: Column(                    
                     //mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                          Image(image: AssetImage('assets/escudo.png'),height:size.height * 0.20,), 
-                          SizedBox(height: 40,),                     
-                          Text('SOCIOS', style: GoogleFonts.abrilFatface(color: Colors.white, fontSize:20, fontWeight:FontWeight.bold)),
-                          SizedBox(height: 10,),
-                          Text('C.S. HEREDIANO', style: GoogleFonts.abrilFatface(color: Colors.white, fontSize:20, fontWeight:FontWeight.bold),),
-                          SizedBox(height: 10,),
+                          Image(image: AssetImage('assets/escudo.png'),height:size.height * 0.15,), 
+                          SizedBox(height: 45,),                     
+                          // Text('SOCIOS', style: GoogleFonts.abrilFatface(color: Colors.white, fontSize:18, fontWeight:FontWeight.bold)),
+                          // SizedBox(height: 5,),
+                          Text('SOCIOS C.S. HEREDIANO', style: GoogleFonts.abrilFatface(color: Colors.white, fontSize:18, fontWeight:FontWeight.bold),),
+                          
                        
                       
                   

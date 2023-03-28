@@ -63,7 +63,7 @@ class CalendarListView extends StatelessWidget {
                               radius: 20,
                               
                             ),
-                            title: Text(' VS $visitante',style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold,color: Colors.black)),
+                            title: Text(' VS $visitante',style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold,color: Colors.black)),
                             subtitle: Text('Fecha: $fecha  Hora: $hora',style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold,color: Color.fromARGB(255, 1, 84, 151))),
                             
                           ),

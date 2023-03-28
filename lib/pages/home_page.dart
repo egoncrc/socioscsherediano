@@ -22,7 +22,7 @@ class HomePage extends StatelessWidget {
     return  Scaffold(
       
       appBar: AppBar(
-        title: Text('Socio(a): ${userService.nombreSocio}', style: const TextStyle(color: Colors.white70,fontWeight: FontWeight.bold, fontSize:18)),
+        title: Text('Socio(a): ${userService.nombreSocio}'.toUpperCase(), style: const TextStyle(color: Colors.white,fontWeight: FontWeight.bold, fontSize:13)),
         actions: [IconButton(
                     icon: Icon(Icons.login_outlined, color: Colors.white),
                     onPressed: (){

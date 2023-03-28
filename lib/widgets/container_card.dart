@@ -21,8 +21,8 @@ class ContainerCard extends StatelessWidget {
         decoration: cardContainerDecoration(),
         child: Column(
                   children: [                    
-                    Text('LOGIN', style: TextStyle(color: Color.fromARGB(188, 67, 60, 60),fontWeight: FontWeight.bold, fontSize:22)),
-                    const SizedBox(height:20),
+                    Text('LOGIN', style: TextStyle(color: Color.fromARGB(188, 67, 60, 60),fontWeight: FontWeight.bold, fontSize:18)),
+                    const SizedBox(height:10),
                     
                     ChangeNotifierProvider(
                       create: (_)=> LoginFormProvider(),
@@ -179,11 +179,11 @@ class _LoginForm extends StatelessWidget {
                    }
                 },
                 child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 110, vertical: 20),
+                  padding: const EdgeInsets.symmetric(horizontal: 90, vertical: 20),
                   child: Text(
                     loginForm.isLoading
                     ? 'Espere...' : 'INGRESAR', 
-                    style: const TextStyle(color: Colors.white, fontSize:12),
+                    style: const TextStyle(color: Colors.white, fontSize:11),
                   ),
                 )
                 
